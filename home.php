@@ -2,7 +2,7 @@
     require 'db.php';
     if($_SERVER["REQUEST_METHOD"]=="POST")
     {
-        $res;
+        $res=new stdClass();
         $res->ret=-1;
         $res->fname="";
         $res->lname="";
