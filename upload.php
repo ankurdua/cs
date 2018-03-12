@@ -2,7 +2,7 @@
     
     
     $file=$_FILES["file"];
-    $target_dir="uploads/a.jpg";
+    $target_dir=dirname(__FILE__)."/uploads/a.jpg";
     if ($file['error'] > 0) 
     {
         die('An error occured while upload error code=' . $file['error']);
