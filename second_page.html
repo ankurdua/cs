@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slacker Card</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <meta name="udacity-grader" content="tests.json">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  .container{
+  	vertical-align: center;
+  	align-content: center;
+  	
+  	background-color: #22eeff;
+  	padding: 200px;
+  }
+  .form-control{
+  	width: 80%;
+  }
+  #gap{
+  	padding-left: 10%;
+  	color-rendering: all;
+
+  }
+   
+  </style>
+</head>
+<body>
+	<div  id="gap" >
+		<h2>Lets Satrt The Aloocation Process</h2>
+	</div>
+<div class="container">
+    <form action="upload.php" method="POST">
+  <div class="form-group">
+    <label for="tranid">Enter Transaction Id of the Fee Reciept</label>
+    <input type="tranid" class="form-control" id="tranid" placeholder="Your Transaction Id goes here..">
+  </div>
+  <div class="form-group">
+    <input type="file" name="file"  id="fileupload"> <label for="fileupload"> Select a file to upload</label> <br> </form>
+    <input type="submit" name="submit" value="submit">
+
+ <ul class="pager">
+  <li class="previous"><a href="#">Previous</a></li>
+  <li class="next"><a href="#">Next</a></li>
+</ul>
+</form>
+</div>
+</body>
+</html>
