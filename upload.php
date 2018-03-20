@@ -7,6 +7,7 @@
     {
         die('An error occured while upload error code=' . $file['error']);
     }
+    echo $file["tmp_name"].'<br>';
     $status=  move_uploaded_file($file["tmp_name"], $target_dir);
     if(!$status)
     {
