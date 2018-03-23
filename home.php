@@ -36,6 +36,6 @@
         }
         a:
         echo json_encode($res);
-        
+
     }
 ?>
