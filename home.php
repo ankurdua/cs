@@ -28,7 +28,8 @@
                 $res->sql_err=mysqli_error($con);
                 goto a;
             }
-            $row=mysqli_fetch_assoc($result);
+            
+            
             $res->fname=$row["first_name"];
             $res->lname=$row["last_name"];
             $res->user=$username;
