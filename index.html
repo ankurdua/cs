@@ -48,8 +48,11 @@
 				{
 					if(this.readyState==4&&this.status==200);
 					{
-						if(xmlhttp.responseText=="1")
-								window.location="home.html";
+						if(xmlhttp.responseText=="2")
+								window.location="page2.html";
+                                                else if(xmlhttp.responseText=="3")
+								window.location="page3.html";
+                                                
 						else
 						{
 							document.getElementById("snackbar").innerHTML=xmlhttp.responseText;
@@ -60,8 +63,13 @@
 				xmlhttp.open("post",form.action);
 				xmlhttp.send(new FormData(form));
 			}
-		</script>
-	
+		
+    
+</script>
+
+
+
+                
 </head>
 
 <body>

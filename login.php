@@ -33,7 +33,17 @@
         {
             session_start();
             $_SESSION['user']=$username;
-            echo "1";
+            $sql="SELECT * from file where username='".$username."';";
+            $result= mysqli_query($con, $sql);
+            if(mysqli_num_rows($result)==0)
+            {
+                echo "2";
+            }
+            else
+            {
+                echo "3";
+            }
+            
             exit;
         }
         else 

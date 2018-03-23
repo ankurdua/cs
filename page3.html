@@ -56,9 +56,10 @@
           if(this.readyState==4&&this.status==200);
           {
             if(xmlhttp.responseText=="1")
-                { $("#tohide").hide();
-                 $("#hidden").show();
-                }
+            { 
+                $("#tohide").hide();
+                $("#hidden").show();
+            }
             else
             {
               document.getElementById("snackbar").innerHTML=xmlhttp.responseText;
@@ -90,9 +91,9 @@
       minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
       commodo consequat.</div>
 
-  <form class="form-group" onsubmit="myfunction(this);return false;">
+    <form method="POST" action="handler.php" class="form-group" onsubmit="myfunction(this);return false;">
     <label for="tranid">Enter Admission No of your roommate</label>
-    <input type="tranid" class="form-control" id="tranid" placeholder="roommate addmission number...">
+    <input name="rmate" type="text" class="form-control" id="tranid" placeholder="roommate addmission number...">
      <div>
        <button type="submit" class="btn btn-default" id="show">Submit</button>
       </div>
@@ -102,8 +103,10 @@
   </form>
   </div>
     <div id="hidden">
-       <input type="text" class="form-control" placeholder="OTP pin..." >
+        <form method="POST" action="linker.php" onsubmit="submitOtp(this);return false;">
+       <input name="otp" type="text" class="form-control" placeholder="OTP pin..." >
        <button type="submit" class="btn btn-default" >Submit</button>
+        </form>
     </div>
   </div>
   <div class="panel panel-default">
