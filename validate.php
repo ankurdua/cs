@@ -9,7 +9,7 @@ if(! $conn ) {
    die('Could not connect: ' . mysqli_error());
 }
 echo 'Connected successfully<br>';
-$sql="SELECT roommatename,otp,time1 FROM table1 WHERE username='".$username."'";
+$sql="SELECT roommatename,otp,time1 FROM otptable WHERE username='".$username."'";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {

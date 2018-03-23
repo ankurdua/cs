@@ -1,5 +1,5 @@
 <?php
-    function delete_entry_by_username($username){
+    function delete_entry_by_partner($username){
         $server="mysql";
         $db_username="abc";
         $db_password="123";
@@ -9,7 +9,7 @@
         die('Could not connect: ' . mysqli_error());
         }
         echo 'Connected successfully<br>';
-        $sql = "DELETE FROM table1 WHERE username='".$username."'";
+        $sql = "DELETE FROM otptable WHERE username='".$username."'";
         if (mysqli_query($conn, $sql)) {
             echo "Record deleted successfully";
         } else {

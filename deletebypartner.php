@@ -9,7 +9,7 @@
         die('Could not connect: ' . mysqli_error());
         }
         echo 'Connected successfully<br>';
-        $sql = "DELETE FROM table1 WHERE roommatename='".$username."'";
+        $sql = "DELETE FROM otptable WHERE roommatename='".$username."'";
         if (mysqli_query($conn, $sql)) {
             echo "Record deleted successfully";
         } else {
