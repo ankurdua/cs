@@ -1,52 +1,86 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Slacker Card</title>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-  <meta name="udacity-grader" content="tests.json">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
-  .container{
-  	vertical-align: center;
-  	align-content: center;
-  	
-  	background-color: #22eeff;
-  	padding: 200px;
-  }
-  .form-control{
-  	width: 80%;
-  }
-  #gap{
-  	padding-left: 10%;
-  	color-rendering: all;
 
+<head>
+ <style type="text/css">
+   .alignments{
+    margin-left: 20%;
+    margin-top: 30%;
+   }
+   .btn {
+    background-color: #424242;
+    border: none;
+    color: white;
+    padding: 12px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+  .form-control{
+    width: 80%;
   }
-   
-  </style>
+  .aa{
+    height: 70%;
+    padding-top: 10%;
+  }
+  #fileupload{
+    padding-top: 10%;
+  }
+
+ </style> 
+    
 </head>
-<body>
-	<div  id="gap" >
-		<h2>Lets Start The Allocation Process</h2>
-	</div>
+
+<body style="background-image: url(orgb.jpg); background-repeat: no-repeat;background-size: 1800px 790px; opacity: 0.8;">
+    <div style="width: 50%;height: 60%; position: fixed; top: 17%; left: 25%; border-radius: 10px; box-shadow: 3px 8px 10px #5e1d05;">
+      <div style="float: left; background-color: #2B2B2B;width: 35%; height: 100%; border-bottom-left-radius: 10px;border-top-left-radius: 10px; color: #e5e3e3">
+        <div class="alignments">
+        <div>
+          <b>Name :</b>
+        </div>
+        <div>
+          write here to retrive name
+        </div>
+        <div>
+          <b>Branch :</b>
+        </div>
+        <div>
+          write here to retrive branch
+        </div>
+        <div>
+          <b>Admission number :</b>
+        </div>
+        <div>
+          write here to retrive adm no.
+        </div>
+      </div>
+    </div>
+      <div style="float: right; background-color: #e5e3e3; width: 65%; height: 100%; border-top-right-radius: 10px; border-bottom-right-radius:10px; color: #2B2B2B">
+      <div style="margin-left: 30px;">
+      <div >
+        <h3>Lets Start The Aloocation Process</h3>
+      </div>
+     
 <div class="container">
     <form action="upload.php" method="POST" enctype="multipart/form-data">
   <div class="form-group">
-    <label for="tranid">Enter Transaction Id of the Fee Reciept</label>
-    <input type="tranid" class="form-control" id="tranid" placeholder="Your Transaction Id goes here..">
-  </div>
-  <div class="form-group">
-    <input type="file" name="file"  id="fileupload"> <label for="fileupload"> Select a file to upload</label> <br> </form>
-    <input type="submit" name="submit" value="submit">
-
- <ul class="pager">
-  <li class="previous"><a href="#">Previous</a></li>
-  <li class="next"><a href="#">Next</a></li>
-</ul>
-</form>
+    <input type="file" name="file"  id="fileupload"> <label for="fileupload"> Select a file to upload</label> <br>
+    <div>
+        <input class="btn" type="submit" name="submit" value="Submit" style="margin-left: 35%; margin-top: 20px;">
+      </div>
 </div>
+ </form>
+     
+     
+    </div>
+    </div>
+  </div>
+
 </body>
+
 </html>

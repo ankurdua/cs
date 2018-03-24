@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms no-csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en-US" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Slacker Card</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <meta name="udacity-grader" content="tests.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+  .check-button{
+    display: block;
+    margin: 16px 0 22px;
+    border:none;
+    font-size: 16px;
+    cursor: pointer;
+    background: #D88A04;
+    padding: 7px 11px;
+    color: #fff;
+    outline: none;
+    align-items: center;
+  }
+ 
+  .container-fliud{
+    vertical-align: super;
+    align-content: center;
+    
+    background-color: white;
+    
+    height: 100%;
+    width: 80%;
+    padding-left: 7%; 
+    border-left-style: solid;
+    border-left-width: 2px;
+    border-left-color: blue;
+    padding-top: 0;
+  
+    margin:0 auto;
+    border: 2px solid red;
+  }
+ 
+  .main{
+    width: 80%;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.88);
+    padding: 10% 10%;
+  }
+   
+ 
+ 
+  .gap{
+    background-color: white; 
+    padding: 1.8%;
+    font-size: 8px;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20%;
+   }  
+  .sm{
+    padding: 2%;
+    font-size: 12px;
+     background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20%;
+  }
+ 
+.bb{
+  padding-left: 17%;
+}
+.crd{
+
+}
+.bc{
+    padding-right: 56%;
+}
+.book-right{
+  float: right;
+  width: 50%;
+}
+.book-left{
+  float: left;
+  width: 50%;
+  padding-left: 0%;
+}
+.book-left ul{
+  list-style-type: none;
+}
+.book-left li{
+  font-size: 16px;
+  font-weight: 600;
+  color: #D88A04;
+  line-height: 1.9em;
+}
+.book-right li{
+  line-height: 2.2em;
+}
+.book-right ul{
+  list-style-type: none;
+}
+.secondhalf{
+  padding-bottom: 200px;
+}
+#submit{
+
+   padding-left: 32%;
+}
+
+  </style>
+
+</head>
+<body>
+  <br><br><br>
+
+  <div class="container-fliud " >
+    <div class="main">
+       <div class="secondhalf">
+   <div class="book-left">
+     <ul>
+     <li>Name :</li>
+     <li>Admn. No :</li>
+     <li>Branch :</li>
+     <li>Alloted Hostel :</li>
+     <li>Alloted Floor :</li>
+     <li>Selected Room :</li>
+   </ul>
+   </div>
+
+   
+  
+  <div class="book-right">
+    <ul >
+     <li> text import from backend</li>
+     <li> text import from backend</li>
+     <li> text import from backend</li>
+     <li> text import from backend</li>
+     <li> text import from backend</li>
+     <li> text import from backend</li>
+   </ul>
+ </div>
+   
+ </div>
+ <br>
+    <div >
+     <span class="bb"></span> <!-- 1-->
+  <button type="button" class="btn sm button" id="01">01</button>
+ <button type="button" class="btn sm button " id="03">03</button>
+ <button type="button" class="btn sm button" id="05">05</button>
+ <button type="button" class="btn sm button" id="07">07</button>
+ <button type="button" class="btn sm button" id="08">08</button>
+ <button type="button" class="btn sm button" id="10">10</button>
+ <button type="button" class="btn sm button" id="12">12</button>
+ 
+</div>
+ <br>
+   <div >
+     <span class="bb"></span>  <!-- 2-->
+  <button type="button" class="btn sm button" id="02">02</button>
+ <button type="button" class="btn sm button" id="04">04</button>
+ <button type="button" class="btn sm button" id="06">06</button>
+ <button type="button" class="btn  gap disabled" >Gap</button>
+ <button type="button" class="btn sm button" id="09">09</button>
+ <button type="button" class="btn sm button" id="11">11</button>
+ <button type="button" class="btn sm button" id="13">13</button>
+
+</div>
+   <div ><!-- 3-->
+     
+  <button type="button" class="btn sm button" id="51">51</button>
+    <span class="crd"></span>
+ <button type="button" class="btn sm button" id="52">52</button>
+   <span class="bc"></span>
+ <button type="button" class="btn sm button" id="15">15</button>
+   <span class="crd"></span>
+ <button type="button" class="btn sm button" id="14">14</button>
+ 
+</div>
+  <div><!-- 4-->
+     
+  <button type="button" class="btn sm button" id="49">49</button>
+    <span class="crd"></span>
+ <button type="button" class="btn sm button" id="50">50</button>
+   <span class="bc"></span>
+ <button type="button" class="btn sm button" id="17">17</button>
+   <span class="crd"></span>
+ <button type="button" class="btn sm button" id="16">16</button>
+ 
+</div>
+ <div><!-- 5-->
+     
+  <button type="button" class="btn sm button" id="47">47</button>
+    <span class="crd"></span>
+ <button type="button" class="btn sm button" id="48">48</button>
+   <span class="bc"></span>
+ <button type="button" class="btn sm button" id="19">19</button>
+   <span class="crd"></span>
+ <button type="button" class="btn sm button" id="18">18</button>
+ 
+</div>
+ <div ><!-- 6-->
+     
+  <button type="button" class="btnsm sm button" id="46">46</button>
+    <span class="crd"></span>
+ <button type="button" class="btn gap disabled" >Gap</button>
+   <span class="bc"></span>
+ <button type="button"  class="btn gap disabled">Gap</button>
+   <span class="mm"></span>
+ <button type="button" class="btn sm button" id="20">20</button>
+ 
+</div>
+ <div ><!-- 7-->
+     
+  <button type="button" class="btn sm button" id="44">44</button>
+    <span class="crd"></span>
+ <button type="button" class="btn sm button" id="45">45</button>
+   <span class="bc"></span>
+ <button type="button" class="btn sm button" id="22">22</button>
+   <span class="crd"></span>
+ <button type="button" class="btn sm button" id="21">21</button>
+ 
+</div>
+ <div ><!-- 8-->
+     
+  <button type="button" class="btn sm button" id="42">42</button>
+    <span class="crd"></span>
+ <button type="button" class="btn sm button" id="43">43</button>
+   <span class="bc"></span>
+ <button type="button" class="btn sm button" id="24">24</button>
+   <span class="crd"></span>
+ <button type="button" class="btn sm button" id="23
+ ">23</button>
+ 
+</div>
+ <div ><!-- 9-->
+     
+  <button type="button" class="btn sm button">40</button>
+    <span class="crd"></span>
+ <button type="button" class="btn sm button">41</button>
+   <span class="bc"></span>
+ <button type="button" class="btn sm button">26</button>
+   <span class="crd"></span>
+ <button type="button" class="btn sm button">25</button>
+ 
+</div>
+
+    <div ><!-- 10-->
+     <span class="bb"></span> 
+  <button type="button" class="btn sm button ">39</button>
+ <button type="button" class="btn sm button ">37</button>
+ <button type="button" class="btn sm button">35</button>
+ <button type="button" class="btn gap disabled">Gap</button>
+ <button type="button" class="btn sm button">32</button>
+ <button type="button" class="btn sm button">30</button>
+ <button type="button" class="btn sm button">28</button>
+ 
+</div>
+ <br>
+  <div><!-- 11-->
+     <span class="bb"></span>  
+  <button type="button" class="btn sm button">38</button>
+ <button type="button" class="btn sm button">36</button>
+ <button type="button" class="btn sm button">34</button>
+ <button type="button" class="btn sm button">33</button>
+ <button type="button" class="btn sm button">31</button>
+ <button type="button" class="btn sm button">29</button>
+ <button type="button" class="btn sm button">27</button>
+
+</div>
+
+ <br><br>
+<span id="submit"></span>
+  <button type="button" class="btn btn-primary btn-lg "  >Final Submission</button>    
+</div>
+
+</div>
+<br><br><br>
+</body>
+</html>

@@ -16,7 +16,7 @@
             exit();
         }
         $otp=$_POST['otp'];
-        $result=validateOTP($username,$otp);
+        $result=validate($username,$otp);
         if(!$result['valid'])
         {
             echo "Invalid OTP";

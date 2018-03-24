@@ -43,20 +43,44 @@
             echo 'The username you entered has already been alloted a room';
             exit();
         }
-        //change with proper function
+        
         $result=genOTP($username,$rmate);
         if($result['valid']==FALSE)
         {
-            echo "You already have a pending request for ".$result['otp'].". Please "
+            if($result['otp']!="")
+            {
+                echo "You already have a pending request for ".$result['otp'].". Please "
                     . "wait for this request to expire before making a new request";
+            }
+            else 
+            {
+                echo 'An error occured. Please try again.';
+            
+            }
             exit();
         }
-        //put propper function
-        $result= sendMail($mail_of_receiver, $name_of_sender, $otp);
+        
+        $sql="SELECT email from user where username='".$username."';";
+        $result= mysqli_query($con, $sql);
+        if((!$result)|| mysqli_num_rows($result)==0)
+        {
+            echo 'An error occured. Please try again.';
+            exit();
+        }
+        $email= mysqli_fetch_assoc($result)['email'];
+        $sql="SELECT name from user where username='".$rmate."';";
+        $result= mysqli_query($con, $sql);
+        if((!$result)|| mysqli_num_rows($result)==0)
+        {
+            echo 'An error occured. Please try again.';
+            exit();
+        }
+        $name= mysqli_fetch_assoc($result)['name'];
+        $result= sendMail($email, $name, $otp);
         if(!result)
         {
             echo 'An error occured. Please try again.';
-            remOTP($username);
+            deleteEntryByUsername($username);
             exit();
         }
         echo "1";
