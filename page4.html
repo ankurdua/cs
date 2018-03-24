@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <style>
@@ -154,10 +155,13 @@
                   if(res.status[i]==1)//room is already alloted
                   {
                       
-                      var one=document.getElementById(i.toString())
-                      one.toggleclass("sm");
-                      one.toggleclass("rm");
-                      one.toggleclass("disabled");
+                      var one="#"+i.toString();
+                      $(document).ready(function(){
+    
+                       $(one).removeClass("sm");
+                       $(one).addClass("rm disabled")
+                       });
+                    
                   }
                   else
                   {
@@ -172,7 +176,14 @@
       xmlhttp.send();
 				
   }
+ $(document).ready(function(){
+    
+        $("#1").css("color", "red");
+    });
+
+
    </script>
+  
 </head>
 <body onload="load();return false;">
   <br><br><br>
@@ -208,11 +219,11 @@
  <br>
     <div >
      <span class="bb"></span> <!-- 1-->
-  <button type="button" class="btn sm button" id="01">01</button>
- <button type="button" class="btn sm button " id="03">03</button>
- <button type="button" class="btn sm button" id="05">05</button>
- <button type="button" class="btn sm button" id="07">07</button>
- <button type="button" class="btn sm button" id="08">08</button>
+  <button type="button" class="btn sm button" id="1" onclick="myFunction()">01</button>
+ <button type="button" class="btn sm button " id="3">03</button>
+ <button type="button" class="btn sm button" id="5">05</button>
+ <button type="button" class="btn sm button" id="7">07</button>
+ <button type="button" class="btn sm button" id="8">08</button>
  <button type="button" class="btn sm button" id="10">10</button>
  <button type="button" class="btn sm button" id="12">12</button>
  
@@ -220,11 +231,11 @@
  <br>
    <div >
      <span class="bb"></span>  <!-- 2-->
-  <button type="button" class="btn sm button" id="02">02</button>
- <button type="button" class="btn sm button" id="04">04</button>
- <button type="button" class="btn sm button" id="06">06</button>
+  <button type="button" class="btn sm button" id="2">02</button>
+ <button type="button" class="btn sm button" id="4">04</button>
+ <button type="button" class="btn sm button" id="6">06</button>
  <button type="button" class="btn  gap disabled" >Gap</button>
- <button type="button" class="btn sm button" id="09">09</button>
+ <button type="button" class="btn sm button" id="9">09</button>
  <button type="button" class="btn sm button" id="11">11</button>
  <button type="button" class="btn sm button" id="13">13</button>
 
