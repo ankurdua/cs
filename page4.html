@@ -78,6 +78,19 @@
     cursor: pointer;
     border-radius: 20%;
   }
+   .rm{
+    padding: 2%;
+    font-size: 12px;
+     background-color: #ff0000; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20%;
+  }
  
 .bb{
   padding-left: 17%;
@@ -141,7 +154,10 @@
                   if(res.status[i]==1)//room is already alloted
                   {
                       
-                      document.getElementById(i.toString())
+                      var one=document.getElementById(i.toString())
+                      one.toggleclass("sm");
+                      one.toggleclass("rm");
+                      one.toggleclass("disabled");
                   }
                   else
                   {
