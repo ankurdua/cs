@@ -1,4 +1,5 @@
 <?php
+require 'db.php';
 function validate($username,$otp){ 
     $conn = mysqli_connect($server,$db_username,$db_password,$db_name);
     if(! $conn ) 
