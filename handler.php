@@ -60,7 +60,7 @@
             exit();
         }
         
-        $sql="SELECT email from user where username='".$username."';";
+        $sql="SELECT email from user where username='".$rmate."';";
         $result= mysqli_query($con, $sql);
         if((!$result)|| mysqli_num_rows($result)==0)
         {
@@ -68,7 +68,7 @@
             exit();
         }
         $email= mysqli_fetch_assoc($result)['email'];
-        $sql="SELECT name from user where username='".$rmate."';";
+        $sql="SELECT name from user where username='".$username."';";
         $result= mysqli_query($con, $sql);
         if((!$result)|| mysqli_num_rows($result)==0)
         {

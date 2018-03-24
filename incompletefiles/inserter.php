@@ -7,15 +7,44 @@ if(mysqli_error($con))
             echo 'An error occured. Please try again. '. mysqli_error($con);
             exit();
 }
-for($i=1;$i<53;$i++)
-{
-    $sql="INSERT INTO ROOMS VALUES(".$i.", 0);";
-    $res=mysqli_query($con,$sql);
-    if(!$res)
-    {
-        echo 'error i='.$i;
-        exit();
-    }
-}
+$sql="INSERT INTO login values('16je002235','".md5("123")."');";
+mysqli_query($con, $sql);
+
+$sql="INSERT INTO login values('16je002494','".md5("123")."');";
+mysqli_query($con, $sql);
+
+$sql="INSERT INTO login values('16je002562','".md5("123")."');";
+mysqli_query($con, $sql);
+
+$sql="INSERT INTO login values('16je002278','".md5("123")."');";
+mysqli_query($con, $sql);
+
+$sql="Insert into user values('16je002235','Ankur Dua','ankurdua15@gmail.com');";
+mysqli_query($con, $sql);
+
+$sql="Insert into user values('16je002494','Shadab Hussain','shussain609@gmail.com');";
+mysqli_query($con, $sql);
+
+$sql="Insert into user values('16je002562','Khobaib Alam','khobaib222@gmail.com');";
+mysqli_query($con, $sql);
+
+$sql="Insert into user values('16je002278','Ashutosh Shekhar','ashutosh78@gmail.com');";
+mysqli_query($con, $sql);
+
+$sql="Insert into roommate values('16je002235',0,'');";
+mysqli_query($con, $sql);
+
+
+$sql="Insert into roommate values('16je002494',0,'');";
+mysqli_query($con, $sql);
+
+
+$sql="Insert into roommate values('16je002562',0,'');";
+mysqli_query($con, $sql);
+
+
+$sql="Insert into roommate values('16je002278',0,'');";
+mysqli_query($con, $sql);
+
 echo 'successful';
 ?>
