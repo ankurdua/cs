@@ -31,19 +31,19 @@ mysqli_query($con, $sql);
 $sql="Insert into user values('16je002278','Ashutosh Shekhar','ashutosh78@gmail.com');";
 mysqli_query($con, $sql);
 
-$sql="Insert into roommate values('16je002235',0,'');";
+$sql="Insert into roommate values('16je002235',0,'',0);";
 mysqli_query($con, $sql);
 
 
-$sql="Insert into roommate values('16je002494',0,'');";
+$sql="Insert into roommate values('16je002494',0,'',0);";
 mysqli_query($con, $sql);
 
 
-$sql="Insert into roommate values('16je002562',0,'');";
+$sql="Insert into roommate values('16je002562',0,'',0);";
 mysqli_query($con, $sql);
 
 
-$sql="Insert into roommate values('16je002278',0,'');";
+$sql="Insert into roommate values('16je002278',0,'',0);";
 mysqli_query($con, $sql);
 
 echo 'successful';

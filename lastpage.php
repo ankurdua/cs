@@ -4,9 +4,9 @@
     if($_SERVER["REQUEST_METHOD"]=="POST")
     {
         $res=new stdClass();
-        $res->ret=-1;
+        $res->ret=-2;
         $res->roommatename="";
-        $res->hostelname="";
+        $res->name="";
         $res->roomno="";
         session_start();
         if(isset($_SESSION['user'])&&$_SESSION["user"]!="")
@@ -20,53 +20,22 @@
                 $res->sql_err=mysqli_error($con);
                 goto a;
             }
-			
-			//query for the roommate name.
-			
-            //here the table name is taken as "thetable".
-            $sql="SELECT * FROM thetable WHERE roommatename='".$username."';";
-            $result=mysqli_query($con, $sql);
-            if (!$result) 
-            {
-		$res->ret=0;
-                $res->sql_err=mysqli_error($con);
-		goto a;
-            }
-            $row=mysqli_fetch_assoc($result);
-            $res->roommatename=$row["roommatename"];
-            if($res->roommatename=="")
-            {
-    		$res->ret=0;
-		goto a;
-            }
-			
-			//query for roommate name is complete.
-			
-			
-			//query for hostelname.
-			
-			//the databse name for hostelname is "hostels".
-            $sql="SELECT * FROM hostels WHERE username='".$username."';";
-            $result=mysqli_query($con, $sql);
-            if (!$result) 
-            {
-		$res->ret=0;
-                $res->sql_err=mysqli_error($con);
-		goto a;
-            }
-            $row=mysqli_fetch_assoc($result);
-            $res->hostelname=$row["hostelname"];
-            if($res->hostelname=="")
-            {
-		$res->ret=0;
-                $res->sql_err=mysqli_error($con);
-		goto a;
-            }
-            $res->roomno=$roomno;
-			
-             $res->ret=1;
-        }
-        a:
+            $sql="SELECt * from user where username='".$username."';";
+            $result=mysqli_query($con,$sql);
+            $result=mysqli_fetch_assoc($result);
+            $res->name=$result['name'];
+            $sql="SELECT * FROM roommate WHERE username  = '".$username."';";
+            $result = mysqli_querry($con,$sql);
+            $result = mysqli_fetch_assoc($result);
+            $res->roomno="".$result["room"];
+            $part=$result["partner"];
+            $sql="SELECt * from user where username='".$part."';";
+            $result=mysqli_query($con,$sql);
+            $result=mysqli_fetch_assoc($result);
+            $res->roommatename=$result['name'];
+            $res->ret=1;
+            
+        }    
         echo json_encode($res);
     }
 ?>

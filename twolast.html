@@ -73,9 +73,34 @@
   padding-bottom: 200px;
 }
     </style>
-
+    <script type="text/javascript">
+        function load()
+        {
+            xmlhttp=new XMLHttpRequest();
+            xmlhttp.onreadystatechange=function()
+            {
+                if(this.readyState==4&&this.status==200)
+                {
+                    var res=JSON.parse(this.responseText);
+                    if(res.ret==1)
+                    {
+                        document.getElementById("name").innerHTML=res.name;
+                        document.getElementById("rname").innerHTML=res.roommatename;
+                        document.getElementById("room").innerHTML=res.roomno;
+                    }
+                    else
+                    {
+                        alert("An error occured");
+                    }
+                    
+                }
+            };
+            xmlhttp.open("post","lastpage.php");
+            xmlhttp.send();
+        }
+        </script>
 </head>
-<body style="background-image: url(blue.jpg); background-repeat: no-repeat;background-size: 1800px 790px; opacity: 0.8;  ">
+<body onload="load()" style="background-image: url(blue.jpg); background-repeat: no-repeat;background-size: 1800px 790px; opacity: 0.8;  ">
  
 <div class=" aa fixed2  " style="box-shadow: 3px 8px 10px #bf80ff;">
  <p class="ee">
@@ -90,11 +115,8 @@
    <div class="book-left">
      <ul>
      <li>Name :</li>
-     <li>Admn. No :</li>
      <li>Roommate :</li>
-      <li>Roommate's Admn No :</li>
      <li>Alloted Hostel :</li>
-     <li>Alloted Floor :</li>
      <li>Alloted Room :</li>
    </ul>
    </div>
@@ -103,20 +125,18 @@
   
   <div class="book-right">
     <ul >
-     <li> text import from backend</li>
-     <li> text import from backend</li>
-     <li> text import from backend</li>
-     <li> text import from backend</li>
-     <li> text import from backend</li>
-     <li> text import from backend</li>
-     <li> text import from backend</li>
+     <li id="name">t</li>
+     <li id="rname">t</li>
+     <li>Jasper Hostel</li>
+     <li id="room">t</li>
+    
    </ul>
  </div>
    
  </div>
 
 <div class="rr" style="padding-left: 420px; padding-top: 50px;">
-<button type="button" class="btn btn-info"><span class="glyphicon glyphicon-off " > Logout</button>
+<button type="button" class="btn btn-info"><span class="glyphicon glyphicon-off " onclick="window.location='logout.php'"> Logout</button>
 </div>
  <p class="ee">
 <span class="glyphicon glyphicon-pencil">
