@@ -47,7 +47,8 @@
         }
         
         $result=genOTP($username,$rmate);
-        if($result['valid']==FALSE)
+        $otp=$result['otp'];
+        if($result['valid']==False)
         {
             if($result['otp']!="")
             {
@@ -79,14 +80,14 @@
         }
         $name= mysqli_fetch_assoc($result)['name'];
         
-        $result= sendMail($email, $name, "".$otp,$rmate);
+        $result= sendMail($email, $name, $otp,$rmate);
         if(!result)
         {
             echo 'An error occured. Please try again.';
             deleteEntryByUsername($username);
             exit();
         }
-        echo "1";
+        echo '1';
         exit();
         
         
