@@ -35,7 +35,7 @@
             $_SESSION['user']=$username;
             $sql="SELECT * from file where username='".$username."';";
             $result= mysqli_query($con, $sql);
-            if(mysqli_num_rows($result)==0)
+            if((mysqli_num_rows($result))==0)
             {
                 echo "2";
             }
