@@ -121,9 +121,44 @@
 }
 
   </style>
-
+  <script type="text/javascript">
+  function load()
+  {
+      xmlhttp=new XMLHttpRequest();
+      xmlhttp.onreadystatechange=function()
+      {
+          if(this.readyState==4&&this.status==200)
+          {
+              var res=JSON.parse(this.responseText);
+              if(res.error==1)
+              {
+                  alert('An error occured.Please try again');
+                  window.location="index.html";
+                  return;
+              }
+              for(var i=1;i<53;i++)
+              {
+                  if(res.status[i]==1)//room is already alloted
+                  {
+                      
+                      document.getElementById(i.toString())
+                  }
+                  else
+                  {
+                      
+                  }
+              }
+              
+              
+          }
+      };
+      xmlhttp.open("post","page4.php");
+      xmlhttp.send();
+				
+  }
+   </script>
 </head>
-<body>
+<body onload="load();return false;">
   <br><br><br>
 
   <div class="container-fliud " >
@@ -241,43 +276,42 @@
    <span class="bc"></span>
  <button type="button" class="btn sm button" id="24">24</button>
    <span class="crd"></span>
- <button type="button" class="btn sm button" id="23
- ">23</button>
+ <button type="button" class="btn sm button" id="23">23</button>
  
 </div>
  <div ><!-- 9-->
      
-  <button type="button" class="btn sm button">40</button>
+  <button type="button" class="btn sm button" id="40">40</button>
     <span class="crd"></span>
- <button type="button" class="btn sm button">41</button>
+ <button type="button" class="btn sm button" id="41">41</button>
    <span class="bc"></span>
- <button type="button" class="btn sm button">26</button>
+ <button type="button" class="btn sm button" id="26">26</button>
    <span class="crd"></span>
- <button type="button" class="btn sm button">25</button>
+ <button type="button" class="btn sm button" id="25">25</button>
  
 </div>
 
     <div ><!-- 10-->
      <span class="bb"></span> 
-  <button type="button" class="btn sm button ">39</button>
- <button type="button" class="btn sm button ">37</button>
- <button type="button" class="btn sm button">35</button>
+  <button type="button" class="btn sm button " id="39">39</button>
+ <button type="button" class="btn sm button " id="37">37</button>
+ <button type="button" class="btn sm button" id="35">35</button>
  <button type="button" class="btn gap disabled">Gap</button>
- <button type="button" class="btn sm button">32</button>
- <button type="button" class="btn sm button">30</button>
- <button type="button" class="btn sm button">28</button>
+ <button type="button" class="btn sm button" id="32">32</button>
+ <button type="button" class="btn sm button" id="30">30</button>
+ <button type="button" class="btn sm button" id="28">28</button>
  
 </div>
  <br>
   <div><!-- 11-->
      <span class="bb"></span>  
-  <button type="button" class="btn sm button">38</button>
- <button type="button" class="btn sm button">36</button>
- <button type="button" class="btn sm button">34</button>
- <button type="button" class="btn sm button">33</button>
- <button type="button" class="btn sm button">31</button>
- <button type="button" class="btn sm button">29</button>
- <button type="button" class="btn sm button">27</button>
+  <button type="button" class="btn sm button" id="38">38</button>
+ <button type="button" class="btn sm button" id="36">36</button>
+ <button type="button" class="btn sm button" id="34">34</button>
+ <button type="button" class="btn sm button" id="33">33</button>
+ <button type="button" class="btn sm button" id="31">31</button>
+ <button type="button" class="btn sm button" id="29">29</button>
+ <button type="button" class="btn sm button" id="27">27</button>
 
 </div>
 

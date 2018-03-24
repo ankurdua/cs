@@ -27,18 +27,18 @@
             $sql="SELECT * FROM thetable WHERE roommatename='".$username."';";
             $result=mysqli_query($con, $sql);
             if (!$result) 
-			{
-				$res->ret=0;
+            {
+		$res->ret=0;
                 $res->sql_err=mysqli_error($con);
-				goto a:
+		goto a;
             }
             $row=mysqli_fetch_assoc($result);
             $res->roommatename=$row["roommatename"];
             if($res->roommatename=="")
-			{
-				$res->ret=0;
-				goto a:
-			}
+            {
+    		$res->ret=0;
+		goto a;
+            }
 			
 			//query for roommate name is complete.
 			
@@ -46,34 +46,25 @@
 			//query for hostelname.
 			
 			//the databse name for hostelname is "hostels".
-			$sql="SELECT * FROM hostels WHERE username='".$username."';";
-			$result=mysqli_query($con, $sql);
-			if (!$result) 
-			{
-				$res->ret=0;
+            $sql="SELECT * FROM hostels WHERE username='".$username."';";
+            $result=mysqli_query($con, $sql);
+            if (!$result) 
+            {
+		$res->ret=0;
                 $res->sql_err=mysqli_error($con);
-				goto a:
+		goto a;
             }
-			$row=mysqli_fetch_assoc($result);
-			$res->hostelname=$row["hostelname"];
-			if($res->hostelname=="")
-			{
-				$res->ret=0;
+            $row=mysqli_fetch_assoc($result);
+            $res->hostelname=$row["hostelname"];
+            if($res->hostelname=="")
+            {
+		$res->ret=0;
                 $res->sql_err=mysqli_error($con);
-				goto a:
-			}
+		goto a;
+            }
+            $res->roomno=$roomno;
 			
-			//query for hostelname is complete.
-			
-			
-			
-			//query for roomno is yet to be done...................................
-			
-			$res->roomno=$roomno;
-			
-			//.....................................................................
-			
-            $res->ret=1;
+             $res->ret=1;
         }
         a:
         echo json_encode($res);
