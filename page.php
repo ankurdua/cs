@@ -43,7 +43,7 @@ function genOTP($username, $roommatename )
     //if it is not, assign in the table.	
     else
     {
-	$otp= rand(pow(10, 8-1), pow(10, 8)-1);
+	$otp= "".rand(pow(10, 8-1), pow(10, 8)-1);
 	$sql="INSERT INTO otptable VALUES ('".$username."','".$roommatename."','".$otp."',now());";
 	$result=mysqli_query($con, $sql);
         if (!$result) 
@@ -52,7 +52,7 @@ function genOTP($username, $roommatename )
             return $arr;
         }
 	$arr['valid']=True;
-	$arr['otp']=''.$otp;
+	$arr['otp']=$otp;
 	return $arr;
     }
 }

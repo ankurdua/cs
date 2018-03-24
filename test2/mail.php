@@ -10,7 +10,7 @@
             $message->setFrom(array($_ENV['gmailUsername'] => 'Hostel Administration'));
             $message->setTo(array($mail_of_receiver => $admission_number));
             $message->setBody(
-                "Tell this otp to <strong>$name_of_sender</strong> to accept him as room partner.<strong>OTP </strong>is <strong>$otp</strong>", 'text/html'
+                "Tell this otp to <strong>".$name_of_sender."</strong> to accept him as room partner.<strong>OTP </strong>is <strong>".$otp."</strong>", 'text/html'
             );
             $result = $mailer->send($message);
             return $result;
