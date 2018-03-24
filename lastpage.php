@@ -25,7 +25,7 @@
             $result=mysqli_fetch_assoc($result);
             $res->name=$result['name'];
             $sql="SELECT * FROM roommate WHERE username  = '".$username."';";
-            $result = mysqli_querry($con,$sql);
+            $result = mysqli_query($con,$sql);
             $result = mysqli_fetch_assoc($result);
             $res->roomno="".$result["room"];
             $part=$result["partner"];
@@ -36,6 +36,7 @@
             $res->ret=1;
             
         }    
+        a:
         echo json_encode($res);
     }
 ?>
