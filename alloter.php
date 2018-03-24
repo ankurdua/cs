@@ -19,7 +19,7 @@ require 'db.php';
         }
         $room=$_POST['room'];
         $sql="SELECT * FROM rooms where room=".$room.";";
-        $result=mysqli($con,$sql);
+        $result=mysqli_query($con,$sql);
         $result=mysql_fetch_assoc($result);
         if($result["status"]==1)
         {

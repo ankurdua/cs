@@ -32,6 +32,11 @@
         
         $result->status[$row['room']]=$row['status'];    
     }
+    $sql="SELECT * from user where username='".$username."';";
+    $row= mysqli_query($con, $sql);
+    $row=mysqli_fetch_assoc($row);
+    $result->name=$row["name"];
+    $result->uname=$username;
     echo json_encode($result);
     exit();
 
