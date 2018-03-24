@@ -1,8 +1,13 @@
 <?php
-require 'db.php';
-function validate($username,$otp){ 
-    $conn = mysqli_connect($server,$db_username,$db_password,$db_name);
-    if(! $conn ) 
+
+function validate($username,$otp)
+{ 
+    $server="mysql";
+    $db_username="abc";
+    $db_password="123";
+    $db_name="db";
+    $conn=mysqli_connect($server,$db_username,$db_password,$db_name);
+    if(!$conn) 
     {
         return array("valid" => false,"partner" => "0");
     }
@@ -23,4 +28,4 @@ function validate($username,$otp){
     }
 
 }
-?>
+
