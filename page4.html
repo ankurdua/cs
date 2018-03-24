@@ -79,6 +79,19 @@
     cursor: pointer;
     border-radius: 20%;
   }
+  .bm{
+    padding: 2%;
+    font-size: 12px;
+     background-color: blue; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20%;
+  }
    .rm{
     padding: 2%;
     font-size: 12px;
@@ -136,6 +149,20 @@
 
   </style>
   <script type="text/javascript">
+      var x=0;
+      function clicka(btna)
+      {
+          
+          if(x!=0)
+          {
+              $(x).removeClass("bm");
+              $(x).addClass("sm");
+              
+          }
+          x=document.getElementById(btna);
+          $(x).removeClass("sm");
+          $(x).addClass("bm");
+      }
   function load()
   {
       xmlhttp=new XMLHttpRequest();
@@ -154,15 +181,16 @@
               {
                   if(res.status[i]==1)//room is already alloted
                   {
+   
                       
                       var one="#"+i.toString();
-                      $(document).ready(function(){
+                      
     
                        $(one).removeClass("sm");
-                       $(one).addClass("rm disabled")
-                       });
+                       $(one).addClass("rm disabled");
+                      
                     
-                  }
+                    }
                   else
                   {
                       
@@ -176,10 +204,7 @@
       xmlhttp.send();
 				
   }
- $(document).ready(function(){
-    
-        $("#1").css("color", "red");
-    });
+ 
 
 
    </script>
@@ -219,126 +244,120 @@
  <br>
     <div >
      <span class="bb"></span> <!-- 1-->
-  <button type="button" class="btn sm button" id="1" onclick="myFunction()">01</button>
- <button type="button" class="btn sm button " id="3">03</button>
- <button type="button" class="btn sm button" id="5">05</button>
- <button type="button" class="btn sm button" id="7">07</button>
- <button type="button" class="btn sm button" id="8">08</button>
- <button type="button" class="btn sm button" id="10">10</button>
- <button type="button" class="btn sm button" id="12">12</button>
+     <button type="button" class="btn sm button" id="1" onClick="clicka(id)">01</button>
+ <button type="button" class="btn sm button " id="3" onClick="clicka(id)">03</button>
+ <button type="button" class="btn sm button" id="5" onClick="clicka(id)">05</button>
+ <button type="button" class="btn sm button" id="7" onClick="clicka(id)">07</button>
+ <button type="button" class="btn sm button" id="8" onClick="clicka(id)">08</button>
+ <button type="button" class="btn sm button" id="10" onClick="clicka(id)">10</button>
+ <button type="button" class="btn sm button" id="12" onClick="clicka(id)">12</button>
  
 </div>
  <br>
    <div >
      <span class="bb"></span>  <!-- 2-->
-  <button type="button" class="btn sm button" id="2">02</button>
- <button type="button" class="btn sm button" id="4">04</button>
- <button type="button" class="btn sm button" id="6">06</button>
  <button type="button" class="btn  gap disabled" >Gap</button>
- <button type="button" class="btn sm button" id="9">09</button>
- <button type="button" class="btn sm button" id="11">11</button>
- <button type="button" class="btn sm button" id="13">13</button>
 
 </div>
    <div ><!-- 3-->
      
-  <button type="button" class="btn sm button" id="51">51</button>
+  <button type="button" class="btn sm button" id="51" onClick="clicka(id)">51</button>
     <span class="crd"></span>
- <button type="button" class="btn sm button" id="52">52</button>
+ <button type="button" class="btn sm button" id="52" onClick="clicka(id)">52</button>
    <span class="bc"></span>
- <button type="button" class="btn sm button" id="15">15</button>
+ <button type="button" class="btn sm button" id="15" onClick="clicka(id)">15</button>
    <span class="crd"></span>
- <button type="button" class="btn sm button" id="14">14</button>
+ <button type="button" class="btn sm button" id="14" onClick="clicka(id)">14</button>
  
 </div>
   <div><!-- 4-->
      
-  <button type="button" class="btn sm button" id="49">49</button>
+  <button type="button" class="btn sm button" id="49" onClick="clicka(id)">49</button>
     <span class="crd"></span>
- <button type="button" class="btn sm button" id="50">50</button>
+ <button type="button" class="btn sm button" id="50" onClick="clicka(id)">50</button>
    <span class="bc"></span>
- <button type="button" class="btn sm button" id="17">17</button>
+ <button type="button" class="btn sm button" id="17" onClick="clicka(id)">17</button>
    <span class="crd"></span>
- <button type="button" class="btn sm button" id="16">16</button>
+ <button type="button" class="btn sm button" id="16" onClick="clicka(id)">16</button>
  
 </div>
  <div><!-- 5-->
      
-  <button type="button" class="btn sm button" id="47">47</button>
+  <button type="button" class="btn sm button" id="47" onClick="clicka(id)">47</button>
     <span class="crd"></span>
- <button type="button" class="btn sm button" id="48">48</button>
+ <button type="button" class="btn sm button" id="48" onClick="clicka(id)">48</button>
    <span class="bc"></span>
- <button type="button" class="btn sm button" id="19">19</button>
+ <button type="button" class="btn sm button" id="19" onClick="clicka(id)">19</button>
    <span class="crd"></span>
- <button type="button" class="btn sm button" id="18">18</button>
+ <button type="button" class="btn sm button" id="18" onClick="clicka(id)">18</button>
  
 </div>
  <div ><!-- 6-->
      
-  <button type="button" class="btnsm sm button" id="46">46</button>
+  <button type="button" class="btnsm sm button" id="46" onClick="clicka(id)">46</button>
     <span class="crd"></span>
  <button type="button" class="btn gap disabled" >Gap</button>
    <span class="bc"></span>
  <button type="button"  class="btn gap disabled">Gap</button>
    <span class="mm"></span>
- <button type="button" class="btn sm button" id="20">20</button>
+ <button type="button" class="btn sm button" id="20" onClick="clicka(id)">20</button>
  
 </div>
  <div ><!-- 7-->
      
-  <button type="button" class="btn sm button" id="44">44</button>
+  <button type="button" class="btn sm button" id="44" onClick="clicka(id)">44</button>
     <span class="crd"></span>
- <button type="button" class="btn sm button" id="45">45</button>
+ <button type="button" class="btn sm button" id="45" onClick="clicka(id)">45</button>
    <span class="bc"></span>
- <button type="button" class="btn sm button" id="22">22</button>
+ <button type="button" class="btn sm button" id="22" onClick="clicka(id)">22</button>
    <span class="crd"></span>
- <button type="button" class="btn sm button" id="21">21</button>
+ <button type="button" class="btn sm button" id="21" onClick="clicka(id)">21</button>
  
 </div>
  <div ><!-- 8-->
      
-  <button type="button" class="btn sm button" id="42">42</button>
+  <button type="button" class="btn sm button" id="42" onClick="clicka(id)">42</button>
     <span class="crd"></span>
- <button type="button" class="btn sm button" id="43">43</button>
+ <button type="button" class="btn sm button" id="43" onClick="clicka(id)">43</button>
    <span class="bc"></span>
- <button type="button" class="btn sm button" id="24">24</button>
+ <button type="button" class="btn sm button" id="24" onClick="clicka(id)">24</button>
    <span class="crd"></span>
- <button type="button" class="btn sm button" id="23">23</button>
+ <button type="button" class="btn sm button" id="23" onClick="clicka(id)">23</button>
  
 </div>
  <div ><!-- 9-->
      
-  <button type="button" class="btn sm button" id="40">40</button>
+  <button type="button" class="btn sm button" id="40" onClick="clicka(id)">40</button>
     <span class="crd"></span>
- <button type="button" class="btn sm button" id="41">41</button>
+ <button type="button" class="btn sm button" id="41" onClick="clicka(id)">41</button>
    <span class="bc"></span>
- <button type="button" class="btn sm button" id="26">26</button>
+ <button type="button" class="btn sm button" id="26" onClick="clicka(id)">26</button>
    <span class="crd"></span>
- <button type="button" class="btn sm button" id="25">25</button>
+ <button type="button" class="btn sm button" id="25" onClick="clicka(id)">25</button>
  
 </div>
 
     <div ><!-- 10-->
      <span class="bb"></span> 
-  <button type="button" class="btn sm button " id="39">39</button>
- <button type="button" class="btn sm button " id="37">37</button>
- <button type="button" class="btn sm button" id="35">35</button>
+  <button type="button" class="btn sm button " id="39" onClick="clicka(id)">39</button>
+ <button type="button" class="btn sm button " id="37" onClick="clicka(id)">37</button>
+ <button type="button" class="btn sm button" id="35" onClick="clicka(id)">35</button>
  <button type="button" class="btn gap disabled">Gap</button>
- <button type="button" class="btn sm button" id="32">32</button>
- <button type="button" class="btn sm button" id="30">30</button>
- <button type="button" class="btn sm button" id="28">28</button>
+ <button type="button" class="btn sm button" id="32" onClick="clicka(id)">32</button>
+ <button type="button" class="btn sm button" id="30" onClick="clicka(id)">30</button>
+ <button type="button" class="btn sm button" id="28" onClick="clicka(id)">28</button>
  
 </div>
  <br>
   <div><!-- 11-->
      <span class="bb"></span>  
-  <button type="button" class="btn sm button" id="38">38</button>
- <button type="button" class="btn sm button" id="36">36</button>
- <button type="button" class="btn sm button" id="34">34</button>
- <button type="button" class="btn sm button" id="33">33</button>
- <button type="button" class="btn sm button" id="31">31</button>
- <button type="button" class="btn sm button" id="29">29</button>
- <button type="button" class="btn sm button" id="27">27</button>
+  <button type="button" class="btn sm button" id="38" onClick="clicka(id)">38</button>
+ <button type="button" class="btn sm button" id="36" onClick="clicka(id)">36</button>
+ <button type="button" class="btn sm button" id="34" onClick="clicka(id)">34</button>
+ <button type="button" class="btn sm button" id="33" onClick="clicka(id)">33</button>
+ <button type="button" class="btn sm button" id="31" onClick="clicka(id)">31</button>
+ <button type="button" class="btn sm button" id="29" onClick="clicka(id)">29</button>
+ <button type="button" class="btn sm button" id="27" onClick="clicka(id)">27</button>
 
 </div>
 
@@ -351,3 +370,6 @@
 <br><br><br>
 </body>
 </html>
+  <button type="button" class="btn sm button" id="2" onClick="clicka(id)">02</button>
+ <button type="button" class="btn sm button" id="4" onClick="clicka(id)">04</button>
+ <button type="button" class="btn sm button" id="6" onClick="clicka(id)">06</button>

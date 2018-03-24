@@ -9,12 +9,14 @@
     {
         $result->status[$i]=0;
     }
+    
     if(mysqli_error($con))
     {
         $result->error=1;
         echo json_encode($result);
         exit();
     }
+   
     $sql="SELECT * from rooms;";
     $res= mysqli_query($con, $sql);
     if((!res)||mysqli_num_rows($res)<52)
@@ -23,9 +25,11 @@
         echo json_encode($result);
         exit();
     }
+     
     $row;
-    while(($row= mysqli_fetch_assoc($result)))
+    while(($row= mysqli_fetch_assoc($res)))
     {
+        
         $result->status[$row['room']]=$row['status'];    
     }
     echo json_encode($result);
