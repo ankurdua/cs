@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <style>
@@ -78,6 +79,19 @@
     cursor: pointer;
     border-radius: 20%;
   }
+  .bm{
+    padding: 2%;
+    font-size: 12px;
+     background-color: blue; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20%;
+  }
    .rm{
     padding: 2%;
     font-size: 12px;
@@ -135,6 +149,20 @@
 
   </style>
   <script type="text/javascript">
+      var x=0;
+      function clicka(btna)
+      {
+          
+          if(x!=0)
+          {
+              $(x).removeClass("bm");
+              $(x).addClass("sm");
+              
+          }
+          x=document.getElementById(btna);
+          $(x).removeClass("sm");
+          $(x).addClass("bm");
+      }
   function load()
   {
       xmlhttp=new XMLHttpRequest();
@@ -154,13 +182,15 @@
                   if(res.status[i]==1)//room is already alloted
                   {
    
-                      var o=document.getElementById(i.toString());
-                      o.css("background-color","red");
-                      o.removeClass("sm");
-                      o.addClass("rm");
-                      o.addClass("disabled");
                       
-                  }
+                      var one="#"+i.toString();
+                      
+    
+                       $(one).removeClass("sm");
+                       $(one).addClass("rm disabled");
+                      
+                    
+                    }
                   else
                   {
                       
@@ -174,7 +204,11 @@
       xmlhttp.send();
 				
   }
+ 
+
+
    </script>
+  
 </head>
 <body onload="load();return false;">
   <br><br><br>
@@ -210,30 +244,30 @@
  <br>
     <div >
      <span class="bb"></span> <!-- 1-->
-  <button type="button" class="btn sm button" id="1">01</button>
- <button type="button" class="btn sm button " id="3">03</button>
- <button type="button" class="btn sm button" id="5">05</button>
- <button type="button" class="btn sm button" id="7">07</button>
- <button type="button" class="btn sm button" id="8">08</button>
- <button type="button" class="btn sm button" id="10">10</button>
- <button type="button" class="btn sm button" id="12">12</button>
+     <button type="button" class="btn sm button" id="1" onClick="clicka(id)">01</button>
+ <button type="button" class="btn sm button " id="3" onClick="clicka(id)">03</button>
+ <button type="button" class="btn sm button" id="5" onClick="clicka(id)">05</button>
+ <button type="button" class="btn sm button" id="7" onClick="clicka(id)">07</button>
+ <button type="button" class="btn sm button" id="8" onClick="clicka(id)">08</button>
+ <button type="button" class="btn sm button" id="10" onClick="clicka(id)">10</button>
+ <button type="button" class="btn sm button" id="12" onClick="clicka(id)">12</button>
  
 </div>
  <br>
    <div >
      <span class="bb"></span>  <!-- 2-->
-  <button type="button" class="btn sm button" id="2">02</button>
- <button type="button" class="btn sm button" id="4">04</button>
- <button type="button" class="btn sm button" id="6">06</button>
+  <button type="button" class="btn sm button" id="2" onClick="clicka(id)">02</button>
+ <button type="button" class="btn sm button" id="4" onClick="clicka(id)">04</button>
+ <button type="button" class="btn sm button" id="6" onClick="clicka(id)">06</button>
  <button type="button" class="btn  gap disabled" >Gap</button>
- <button type="button" class="btn sm button" id="9">09</button>
- <button type="button" class="btn sm button" id="11">11</button>
- <button type="button" class="btn sm button" id="13">13</button>
+ <button type="button" class="btn sm button" id="9" onClick="clicka(id)">09</button>
+ <button type="button" class="btn sm button" id="11" onClick="clicka(id)">11</button>
+ <button type="button" class="btn sm button" id="13" onClick="clicka(id)">13</button>
 
 </div>
    <div ><!-- 3-->
      
-  <button type="button" class="btn sm button" id="51">51</button>
+  <button type="button" class="btn sm button" id="51" onClick="clicka(id)">51</button>
     <span class="crd"></span>
  <button type="button" class="btn sm button" id="52">52</button>
    <span class="bc"></span>
