@@ -32,6 +32,8 @@
         
         $result->status[$row['room']]=$row['status'];    
     }
+    session_start();
+    $username=$_SESSION['user'];
     $sql="SELECT * from user where username='".$username."';";
     $row= mysqli_query($con, $sql);
     $row=mysqli_fetch_assoc($row);

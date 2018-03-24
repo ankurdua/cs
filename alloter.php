@@ -20,7 +20,7 @@ require 'db.php';
         $room=$_POST['room'];
         $sql="SELECT * FROM rooms where room=".$room.";";
         $result=mysqli_query($con,$sql);
-        $result=mysql_fetch_assoc($result);
+        $result=mysqli_fetch_assoc($result);
         if($result["status"]==1)
         {
             echo "This room is already occupied.";
