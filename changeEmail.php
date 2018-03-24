@@ -19,10 +19,10 @@
         $sql="UPDATE user set email='".$eml."';";
         if(!mysqli_query($con, $sql))
         {
-            echo 0;
+           echo 'An error occured. Please try again.';
         }
         else
-            echo 1;
+            echo "Email changed Successfully";
         exit();
     }
 

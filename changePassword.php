@@ -15,15 +15,15 @@
             echo 'An error occured. Please try again.';
             exit();
         }
-        $pwd=$_POST['password'];
+        $pwd=$_POST['pwd1'];
         $sql="UPDATE login set password='".md5($pwd)."';";
         if(!mysqli_query($con, $sql))
         {
-            echo 0;
+            echo 'An error occured. Please try again.';
         }
         else
         {
-            echo 1;
+            echo "Password changed Successfully";
         }
         exit();
     }
