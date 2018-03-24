@@ -16,6 +16,7 @@
             exit();
         }
         $otp=$_POST['otp'];
+        require_once  'validate.php';
         $result=validate($username,$otp);
         if(!$result['valid'])
         {

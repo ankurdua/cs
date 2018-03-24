@@ -1,5 +1,7 @@
 <?php
     require 'db.php';
+    require 'page.php';
+    require 'test2/mail.php';
     if($_SERVER["REQUEST_METHOD"]=="POST")
     {
         session_start();
@@ -43,7 +45,7 @@
             echo 'The username you entered has already been alloted a room';
             exit();
         }
-        require_once 'page.php';
+        
         $result=genOTP($username,$rmate);
         if($result['valid']==FALSE)
         {
@@ -76,7 +78,7 @@
             exit();
         }
         $name= mysqli_fetch_assoc($result)['name'];
-        require_once 'test2/mail.php';
+        
         $result= sendMail($email, $name, $otp);
         if(!result)
         {
