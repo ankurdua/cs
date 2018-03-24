@@ -2,10 +2,15 @@
 <html lang="en">
 
 <head>
+   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <meta name="udacity-grader" content="tests.json">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  <style type="text/css">
    .alignments{
-    margin-left: 20%;
-    margin-top: 30%;
+    margin-left: 15%;
+    margin-top: 10%;
    }
    .btn {
     background-color: #424242;
@@ -19,7 +24,21 @@
     margin: 4px 2px;
     cursor: pointer;
 }
-
+ .container{
+    vertical-align: center;
+    align-content: center;
+    
+    width: 90%;
+    margin-right: 100px;
+    
+  
+    text-align: center;
+  }
+  .form-control{
+    align-self: center;
+        width: 100%;
+  }
+ 
 
   .form-control{
     width: 80%;
@@ -37,28 +56,77 @@
 </head>
 
 <body style="background-image: url(orgb.jpg); background-repeat: no-repeat;background-size: 1800px 790px; opacity: 0.8;">
-    <div style="width: 50%;height: 60%; position: fixed; top: 17%; left: 25%; border-radius: 10px; box-shadow: 3px 8px 10px #5e1d05;">
+    <div style="width: 70%;height: 80%; position: fixed; top: 10%; left: 15%; border-radius: 10px; box-shadow: 3px 8px 10px #5e1d05;">
       <div style="float: left; background-color: #2B2B2B;width: 35%; height: 100%; border-bottom-left-radius: 10px;border-top-left-radius: 10px; color: #e5e3e3">
         <div class="alignments">
-        <div>
-          <b>Name :</b>
+        <div style="size: 50px;">
+          <span class="glyphicon glyphicon-user" ></span>
+         <h3> <b>Hello!</b> </h3>
         </div>
         <div>
-          write here to retrive name
+         <h2> Shadab Hussain </h2>
         </div>
-        <div>
-          <b>Branch :</b>
-        </div>
-        <div>
-          write here to retrive branch
-        </div>
-        <div>
-          <b>Admission number :</b>
-        </div>
-        <div>
-          write here to retrive adm no.
-        </div>
+        <div class="container" >
+  <h4>Want to change email id or password?</h4>
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h5 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+        Change Password</a>
+      </h5>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse ">
+      <div id="tohide">
+      
+
+    <form method="POST" action="handler.php" class="form-group" onsubmit="myfunction(this);return false;">
+    <label for="tranid">New Password</label>
+    <input  type="text" class="form-control" id="p1" placeholder=" new password..." style="margin: 0 auto;">
+    <label for="tranid">Confirm Password</label>
+    <input  type="text" class="form-control" id="p2" placeholder="re-enter password..." style="margin: 0 auto;">
+     <div>
+       <button type="submit" class="btn btn-default" id="show">Submit</button>
       </div>
+     
+  </form>
+  </div>
+   
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        Change Email Id</a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse">
+       <form method="POST" action="handler.php" class="form-group" onsubmit="myfunction(this);return false;">
+    <label for="tranid">Enter New Email Id</label>
+    <input name="rmate" type="email" class="form-control" id="tranid" placeholder=" email id.." style="margin: 0 auto;">
+     <div>
+       <button type="submit" class="btn btn-default" id="show" >Submit</button>
+      </div>
+     
+  </form>
+    </div>
+  </div>
+ 
+</div>
+</div>
+</div>
+       
+      </div>
+       <div class="container" style="color: black;">
+         
+       <a href="#" title="Steps need to be done on this page" data-toggle="popover" data-trigger="focus" data-content="Uplaod the fee receipt of payment , then click on submit" style="float: right; color: white;"> <span class="glyphicon glyphicon-question-sign" style="font-size: 35px;" ></span></a>
+      </div>
+
+          <script>
+        $(document).ready(function(){
+         $('[data-toggle="popover"]').popover();   
+              });
+        </script>
     </div>
       <div style="float: right; background-color: #e5e3e3; width: 65%; height: 100%; border-top-right-radius: 10px; border-bottom-right-radius:10px; color: #2B2B2B">
       <div style="margin-left: 30px;">
@@ -71,7 +139,7 @@
   <div class="form-group">
     <input type="file" name="file"  id="fileupload"> <label for="fileupload"> Select a file to upload</label> <br>
     <div>
-        <input class="btn" type="submit" name="submit" value="Submit" style="margin-left: 35%; margin-top: 20px;">
+        <input class="btn" type="submit" name="submit" value="Submit" style="margin-left: 10%; margin-top: 20px;">
       </div>
 </div>
  </form>
