@@ -79,7 +79,7 @@
         }
         $name= mysqli_fetch_assoc($result)['name'];
         
-        $result= sendMail($email, $name, $otp);
+        $result= sendMail($email, $name, "".$otp,$rmate);
         if(!result)
         {
             echo 'An error occured. Please try again.';
