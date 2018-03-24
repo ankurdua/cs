@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms no-csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en-US" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Slacker Card</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <meta name="udacity-grader" content="tests.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+  .check-button{
+    display: block;
+    margin: 16px 0 22px;
+    border:none;
+    font-size: 16px;
+    cursor: pointer;
+    background: #D88A04;
+    padding: 7px 11px;
+    color: #fff;
+    outline: none;
+    align-items: center;
+  }
+ 
+  .container-fliud{
+    vertical-align: super;
+    align-content: center;
+    
+    background-color: white;
+    
+    height: 100%;
+    width: 80%;
+    padding-left: 7%; 
+    border-left-style: solid;
+    border-left-width: 2px;
+    border-left-color: blue;
+    padding-top: 0;
+  
+    margin:0 auto;
+    border: 2px solid red;
+  }
+ 
+  .main{
+    width: 80%;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.88);
+    padding: 10% 10%;
+  }
+   
+ 
+ 
+  .gap{
+    background-color: white; 
+    padding: 1.8%;
+    font-size: 12px;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20%;
+   } 	
+  .sm{
+    padding: 2%;
+    font-size: 12px;
+     background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20%;
+  }
+ 
+.bb{
+  padding-left: 17%;
+}
+.crd{
+
+}
+.bc{
+    padding-right: 58%;
+}
+.book-right{
+  float: right;
+  width: 50%;
+}
+.book-left{
+  float: left;
+  width: 50%;
+  padding-left: 0%;
+}
+.book-left ul{
+  list-style-type: none;
+}
+.book-left li{
+  font-size: 16px;
+  font-weight: 600;
+  color: #D88A04;
+  line-height: 1.9em;
+}
+.book-right li{
+  line-height: 2.2em;
+}
+.book-right ul{
+  list-style-type: none;
+}
+.secondhalf{
+  padding-bottom: 200px;
+}
+#submit{
+
+   padding-left: 32%;
+}
+
+  </style>
+
+</head>
+<body>
+  <br><br><br>
+
+	<div class="container-fliud " >
+    <div class="main">
+       <div class="secondhalf">
+   <div class="book-left">
+     <ul>
+     <li>Name :</li>
+     <li>Admn. No :</li>
+     <li>Branch :</li>
+     <li>Alloted Hostel :</li>
+     <li>Alloted Floor :</li>
+     <li>Selected Room :</li>
+   </ul>
+   </div>
+
+   
+  
+  <div class="book-right">
+    <ul >
+     <li> text import from backend</li>
+     <li> text import from backend</li>
+     <li> text import from backend</li>
+     <li> text import from backend</li>
+     <li> text import from backend</li>
+     <li> text import from backend</li>
+   </ul>
+ </div>
+   
+ </div>
+ <br>
+    <div >
+     <span class="bb"></span> 
+	<button type="button" class="btn sm button ">101</button>
+ <button type="button" class="btn sm button ">103</button>
+ <button type="button" class="btn sm button">105</button>
+ <button type="button" class="btn sm button">107</button>
+ <button type="button" class="btn sm button">109</button>
+ <button type="button" class="btn sm button">111</button>
+ <button type="button" class="btn sm button">113</button>
+ 
+</div>
+ <br>
+   <div >
+     <span class="bb"></span>  
+  <button type="button" class="btn sm button">102</button>
+ <button type="button" class="btn sm button">104</button>
+ <button type="button" class="btn sm button">106</button>
+ <button type="button" class="btn  gap disabled">Gap</button>
+ <button type="button" class="btn sm button">110</button>
+ <button type="button" class="btn sm button">112</button>
+ <button type="button" class="btn sm button">114</button>
+
+</div>
+   <div >
+     
+  <button type="button" class="btn sm button">Info</button>
+    <span class="crd"></span>
+ <button type="button" class="btn sm button">Info</button>
+   <span class="bc"></span>
+ <button type="button" class="btn sm button">Info</button>
+   <span class="crd"></span>
+ <button type="button" class="btn sm button">Info</button>
+ 
+</div>
+  <div>
+     
+  <button type="button" class="btn sm button">Info</button>
+    <span class="crd"></span>
+ <button type="button" class="btn sm button">Info</button>
+   <span class="bc"></span>
+ <button type="button" class="btn sm button">Info</button>
+   <span class="crd"></span>
+ <button type="button" class="btn sm button">Info</button>
+ 
+</div>
+ <div>
+     
+  <button type="button" class="btn sm button">Info</button>
+    <span class="crd"></span>
+ <button type="button" class="btn sm button">Info</button>
+   <span class="bc"></span>
+ <button type="button" class="btn sm button">Info</button>
+   <span class="crd"></span>
+ <button type="button" class="btn sm button">Info</button>
+ 
+</div>
+ <div >
+     
+  <button type="button" class="btnsm sm button">Info</button>
+    <span class="crd"></span>
+ <button type="button" class="btn gap disabled">Gap</button>
+   <span class="bc"></span>
+ <button type="button"  class="btn gap disabled">Gap</button>
+   <span class="mm"></span>
+ <button type="button" class="btn sm button">Info</button>
+ 
+</div>
+ <div >
+     
+  <button type="button" class="btn sm button">Info</button>
+    <span class="crd"></span>
+ <button type="button" class="btn sm button">Info</button>
+   <span class="bc"></span>
+ <button type="button" class="btn sm button">Info</button>
+   <span class="crd"></span>
+ <button type="button" class="btn sm button">Info</button>
+ 
+</div>
+ <div >
+     
+  <button type="button" class="btn sm button">Info</button>
+    <span class="crd"></span>
+ <button type="button" class="btn sm button">Info</button>
+   <span class="bc"></span>
+ <button type="button" class="btn sm button">Info</button>
+   <span class="crd"></span>
+ <button type="button" class="btn sm button">Info</button>
+ 
+</div>
+ <div >
+     
+  <button type="button" class="btn sm button">Info</button>
+    <span class="crd"></span>
+ <button type="button" class="btn sm button">Info</button>
+   <span class="bc"></span>
+ <button type="button" class="btn sm button">Info</button>
+   <span class="crd"></span>
+ <button type="button" class="btn sm button">Info</button>
+ 
+</div>
+
+    <div >
+     <span class="bb"></span> 
+  <button type="button" class="btn sm button ">101</button>
+ <button type="button" class="btn sm button ">103</button>
+ <button type="button" class="btn sm button">105</button>
+ <button type="button" class="btn gap disabled">Gap</button>
+ <button type="button" class="btn sm button">109</button>
+ <button type="button" class="btn sm button">111</button>
+ <button type="button" class="btn sm button">113</button>
+ 
+</div>
+ <br>
+  <div>
+     <span class="bb"></span>  
+  <button type="button" class="btn sm button">102</button>
+ <button type="button" class="btn sm button">104</button>
+ <button type="button" class="btn sm button">106</button>
+ <button type="button" class="btn sm button">108</button>
+ <button type="button" class="btn sm button">110</button>
+ <button type="button" class="btn sm button">112</button>
+ <button type="button" class="btn sm button">114</button>
+
+</div>
+
+ <br><br>
+<span id="submit"></span>
+  <button type="button" class="btn btn-primary btn-lg "  >Final Submission</button>    
+</div>
+
+</div>
+<br><br><br>
+</body>
+</html>
