@@ -84,10 +84,23 @@
         xmlhttp.open("post",form.action);
         xmlhttp.send(new FormData(form));
      }
+     function me()
+     {
+        var xmlhttp=new XMLHttpRequest();
+        xmlhttp.onreadystatechange=function()
+        {
+            if(this.readyState==4&&this.status==200);
+            {
+                document.getElementById("p1p13").innerHTML=this.responseText;              
+            }
+        };
+        xmlhttp.open("post","find.php");
+        xmlhttp.send();
+     }
      </script>
 </head>
 
-<body style="background-image: url(orgb.jpg); background-repeat: no-repeat;background-size: 1800px 790px; opacity: 0.8;">
+<body onload="me()" style="background-image: url(orgb.jpg); background-repeat: no-repeat;background-size: 1800px 790px; opacity: 0.8;">
     <div style="width: 70%;height: 80%; position: fixed; top: 10%; left: 15%; border-radius: 10px; box-shadow: 3px 8px 10px #5e1d05;">
       <div style="float: left; background-color: #2B2B2B;width: 35%; height: 100%; border-bottom-left-radius: 10px;border-top-left-radius: 10px; color: #e5e3e3">
         <div class="alignments">
@@ -96,7 +109,7 @@
          <h3> <b>Hello!</b> </h3>
         </div>
         <div>
-         <h2> Shadab Hussain </h2>
+         <h2 id="p1p13"> Shadab Hussain </h2>
         </div>
         <div class="container" >
   <h4>Want to change email id or password?</h4>

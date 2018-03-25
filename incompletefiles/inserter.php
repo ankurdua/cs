@@ -7,6 +7,26 @@ if(mysqli_error($con))
             echo 'An error occured. Please try again. '. mysqli_error($con);
             exit();
 }
+$sql="delete from login;";
+mysqli_query($con, $sql);
+
+$sql="delete from user;";
+mysqli_query($con, $sql);
+
+$sql="delete from roommate;";
+mysqli_query($con, $sql);
+
+$sql="delete from otptable;";
+mysqli_query($con, $sql);
+
+
+$sql="update rooms set status=0;";
+mysqli_query($con, $sql);
+
+
+$sql="update rooms set status=1 where room<20 and room>10;";
+mysqli_query($con, $sql);
+
 $sql="INSERT INTO login values('16je002235','".md5("123")."');";
 mysqli_query($con, $sql);
 
