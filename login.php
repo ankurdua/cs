@@ -41,7 +41,21 @@
             }
             else
             {
-                echo "3";
+                $sql="SELECT * from roommate where username='".$username."';";
+                $result= mysqli_query($con, $sql);
+                $result=mysqli_fetch_assoc($result);
+                if($result["hasroommate"]==0)
+                {
+                     echo "3";
+                }   
+                elseif ($result["room"]==0) 
+                {
+                    echo "4";
+                }
+                else
+                {
+                    echo "5";
+                }
             }
             
             exit;

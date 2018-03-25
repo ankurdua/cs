@@ -9,7 +9,8 @@ if(mysqli_error($con))
 }
 $sql="delete from login;";
 mysqli_query($con, $sql);
-
+$sq="delete from file;";
+mysqli_query($con,$sql);
 $sql="delete from user;";
 mysqli_query($con, $sql);
 

@@ -45,6 +45,20 @@
             echo 'The username you entered has already been alloted a room';
             exit();
         }
+
+        $sql="SELECT * FROM file where username='".$rmate."';";
+        $result=mysqli_query($con,$sql);
+        if(!$result)
+        {
+            echo 'An error occured. Please try again.';
+            exit();
+        }
+        
+        if(mysqli_num_rows($result)==0)
+        {
+            echo 'Error.The username entered by you has not submitted his fee receipt.';
+            exit();
+        }
         
         $result=genOTP($username,$rmate);
         $otp=$result['otp'];
